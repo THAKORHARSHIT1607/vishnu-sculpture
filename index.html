@@ -3,212 +3,285 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Lord Vishnu Sculpture | Shristhal Sangrahalay</title>
+<title>Lord Vishnu Sculpture | Shristhal Museum</title>
 
 <style>
-    *{
-        margin:0;
-        padding:0;
-        box-sizing:border-box;
-        font-family: Arial, sans-serif;
-    }
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial,sans-serif;
+}
 
-    body{
-        background:#f5f5f5;
-        color:#333;
-        line-height:1.7;
-    }
+body{
+background:#f4f6f9;
+color:#333;
+}
 
-    header{
-        background:#0d47a1;
-        color:white;
-        text-align:center;
-        padding:30px 15px;
-    }
+header{
+background:#0b3d91;
+color:white;
+text-align:center;
+padding:20px;
+}
 
-    header h1{
-        font-size:2rem;
-        margin-bottom:10px;
-    }
+header h1{
+font-size:28px;
+}
 
-    .container{
-        max-width:1100px;
-        margin:30px auto;
-        background:white;
-        border-radius:10px;
-        overflow:hidden;
-        box-shadow:0 4px 15px rgba(0,0,0,0.1);
-    }
+header p{
+margin-top:5px;
+}
 
-    .image-section img{
-        width:100%;
-        display:block;
-    }
+.container{
+max-width:1000px;
+margin:20px auto;
+background:white;
+border-radius:15px;
+box-shadow:0 4px 15px rgba(0,0,0,0.1);
+overflow:hidden;
+}
 
-    .content{
-        padding:25px;
-    }
+.hero img{
+width:100%;
+display:block;
+}
 
-    h2{
-        color:#0d47a1;
-        margin-bottom:15px;
-        border-bottom:2px solid #0d47a1;
-        padding-bottom:5px;
-    }
+.content{
+padding:25px;
+}
 
-    .info-box{
-        background:#f0f7ff;
-        padding:15px;
-        border-left:5px solid #0d47a1;
-        margin-bottom:20px;
-        border-radius:5px;
-    }
+.language-box{
+text-align:right;
+margin-bottom:20px;
+}
 
-    ul{
-        margin-left:25px;
-        margin-top:10px;
-    }
+select{
+padding:10px;
+font-size:16px;
+border-radius:8px;
+}
 
-    .section{
-        margin-bottom:30px;
-    }
+.lang{
+display:none;
+}
 
-    footer{
-        background:#0d47a1;
-        color:white;
-        text-align:center;
-        padding:15px;
-    }
+.active{
+display:block;
+}
 
-    .language{
-        margin-top:40px;
-    }
+h2{
+color:#0b3d91;
+margin-bottom:15px;
+}
 
-    @media(max-width:768px){
-        header h1{
-            font-size:1.5rem;
-        }
+h3{
+margin-top:20px;
+color:#0b3d91;
+}
 
-        .content{
-            padding:15px;
-        }
-    }
+ul{
+margin-left:25px;
+margin-top:10px;
+}
+
+.audio-section{
+margin-top:25px;
+padding:15px;
+background:#eef4ff;
+border-radius:10px;
+}
+
+footer{
+background:#0b3d91;
+color:white;
+text-align:center;
+padding:15px;
+margin-top:20px;
+}
+
+.info-box{
+background:#f5f8ff;
+padding:15px;
+border-left:5px solid #0b3d91;
+margin-bottom:20px;
+border-radius:5px;
+}
 </style>
 </head>
 
 <body>
 
 <header>
-    <h1>Lord Vishnu Sculpture</h1>
-    <p>Shristhal Sangrahalay (Bindu Sarovar Museum), Siddhpur, Gujarat</p>
+<h1>Shristhal Sangrahalay</h1>
+<p>Bindu Sarovar Museum, Siddhpur, Gujarat</p>
 </header>
 
 <div class="container">
 
-    <div class="image-section">
-        <img src="SAVE_20260623_092449.jpg" alt="Lord Vishnu Sculpture">
-    </div>
+<div class="hero">
+<img src="SAVE_20260623_092449.jpg" alt="Lord Vishnu Sculpture">
+</div>
 
-    <div class="content">
+<div class="content">
 
-        <!-- English Section -->
-        <div class="section">
-            <h2>English Information</h2>
+<div class="language-box">
+<select id="language" onchange="changeLanguage()">
+<option value="en">English</option>
+<option value="gu">ગુજરાતી</option>
+<option value="hi">हिन्दी</option>
+</select>
+</div>
 
-            <div class="info-box">
-                <strong>Artifact Name:</strong> Lord Vishnu Sculpture<br>
-                <strong>Location:</strong> Shristhal Sangrahalay (Bindu Sarovar Museum), Siddhpur, Gujarat<br>
-                <strong>Period:</strong> Medieval Period (Approx. 10th–13th Century CE)<br>
-                <strong>Material:</strong> Stone
-            </div>
+<!-- English -->
+<div id="en" class="lang active">
 
-            <h3>Description</h3>
-            <p>
-                This sculpture depicts <strong>Lord Vishnu</strong>, one of the principal deities
-                of Hinduism and the preserver of the universe in the Hindu Trinity
-                (Brahma, Vishnu, and Shiva). The deity is shown standing in a graceful posture,
-                adorned with a crown, jewelry, and finely carved garments.
-            </p>
+<h2>Lord Vishnu Sculpture</h2>
 
-            <p><strong>Lord Vishnu is traditionally identified by his divine attributes:</strong></p>
+<div class="info-box">
+<b>Location:</b> Shristhal Sangrahalay (Bindu Sarovar Museum), Siddhpur, Gujarat<br>
+<b>Period:</b> Medieval Period (Approx. 10th–13th Century CE)<br>
+<b>Material:</b> Stone
+</div>
 
-            <ul>
-                <li><strong>Chakra (Sudarshana Disc)</strong> – Symbol of cosmic order and protection.</li>
-                <li><strong>Shankha (Conch Shell)</strong> – Symbol of creation and the sacred sound "Om."</li>
-            </ul>
+<h3>Description</h3>
 
-            <p>
-                The decorative arch surrounding the deity and the attendant figures carved
-                near the base showcase the exceptional craftsmanship of medieval Gujarat
-                temple art.
-            </p>
+<p>
+This sculpture depicts Lord Vishnu, one of the principal deities of Hinduism and the preserver of the universe in the Hindu Trinity.
+The deity is shown standing in a graceful posture adorned with a crown, jewelry and finely carved garments.
+</p>
 
-            <h3>Historical Importance</h3>
-            <p>
-                The sculpture reflects the rich religious and artistic traditions of Gujarat
-                during the Solanki (Chaulukya) period. Such images were commonly installed
-                in temples for worship and represent the importance of Vaishnavism in the region.
-            </p>
+<h3>Divine Attributes</h3>
 
-            <h3>Significance</h3>
-            <ul>
-                <li>Preservation of the universe</li>
-                <li>Protection of righteousness (Dharma)</li>
-                <li>Compassion and divine guidance</li>
-            </ul>
-        </div>
+<ul>
+<li><b>Chakra (Sudarshana Disc)</b> – Symbol of cosmic order and protection.</li>
+<li><b>Shankha (Conch Shell)</b> – Symbol of creation and sacred sound "Om".</li>
+</ul>
 
-        <!-- Gujarati Section -->
-        <div class="section language">
-            <h2>ગુજરાતી માહિતી</h2>
+<h3>Historical Importance</h3>
 
-            <div class="info-box">
-                <strong>વસ્તુનું નામ:</strong> ભગવાન વિષ્ણુની પ્રતિમા<br>
-                <strong>સ્થળ:</strong> શ્રીસ્થળ સંગ્રહાલય (બિંદુ સરોવર મ્યુઝિયમ), સિદ્ધપુર, ગુજરાત<br>
-                <strong>સમયગાળો:</strong> મધ્યકાલીન સમય (આશરે ૧૦મી થી ૧૩મી સદી)<br>
-                <strong>સામગ્રી:</strong> પથ્થર
-            </div>
+<p>
+The sculpture reflects the rich religious and artistic traditions of Gujarat during the Solanki (Chaulukya) period and represents the importance of Vaishnavism in the region.
+</p>
 
-            <h3>વર્ણન</h3>
-            <p>
-                આ પ્રતિમા હિંદુ ધર્મના મુખ્ય દેવતાઓમાંના એક ભગવાન વિષ્ણુનું પ્રતિનિધિત્વ કરે છે.
-                તેઓ બ્રહ્માંડના પાલનહાર તરીકે માનવામાં આવે છે. પ્રતિમામાં ભગવાન વિષ્ણુને
-                મુગટ, આભૂષણો અને સુંદર વસ્ત્રો સાથે દર્શાવવામાં આવ્યા છે.
-            </p>
+<h3>Significance</h3>
 
-            <p><strong>વિષ્ણુના મુખ્ય પ્રતીકો:</strong></p>
+<ul>
+<li>Preservation of the Universe</li>
+<li>Protection of Dharma</li>
+<li>Compassion and Divine Guidance</li>
+</ul>
 
-            <ul>
-                <li><strong>ચક્ર (સુદર્શન ચક્ર)</strong> – ધર્મ અને રક્ષણનું પ્રતીક.</li>
-                <li><strong>શંખ</strong> – સૃષ્ટિ અને પવિત્ર “ૐ” નાદનું પ્રતીક.</li>
-            </ul>
+</div>
 
-            <p>
-                પ્રતિમાની આસપાસનું અલંકારિક તોરણ અને નીચેના સહાયક પાત્રોની કોતરણી
-                મધ્યકાલીન ગુજરાતની શિલ્પકળાની ઉત્કૃષ્ટતા દર્શાવે છે.
-            </p>
+<!-- Gujarati -->
+<div id="gu" class="lang">
 
-            <h3>ઐતિહાસિક મહત્વ</h3>
-            <p>
-                આ પ્રતિમા સોલંકી યુગની ધાર્મિક અને કલાત્મક પરંપરાનો મહત્વપૂર્ણ પુરાવો છે.
-                આવી પ્રતિમાઓ મંદિરોમાં સ્થાપિત કરવામાં આવતી હતી અને વૈષ્ણવ પરંપરાની
-                લોકપ્રિયતા દર્શાવે છે.
-            </p>
+<h2>ભગવાન વિષ્ણુની પ્રતિમા</h2>
 
-            <h3>મહત્વ</h3>
-            <ul>
-                <li>બ્રહ્માંડનું પાલન</li>
-                <li>ધર્મનું રક્ષણ</li>
-                <li>કરુણા અને દૈવી માર્ગદર્શન</li>
-            </ul>
-        </div>
+<div class="info-box">
+<b>સ્થળ:</b> શ્રીસ્થળ સંગ્રહાલય (બિંદુ સરોવર મ્યુઝિયમ), સિદ્ધપુર<br>
+<b>સમયગાળો:</b> મધ્યકાલીન સમય (આશરે ૧૦મી થી ૧૩મી સદી)<br>
+<b>સામગ્રી:</b> પથ્થર
+</div>
 
-    </div>
+<h3>વર્ણન</h3>
+
+<p>
+આ પ્રતિમા હિંદુ ધર્મના મુખ્ય દેવતાઓમાંના એક ભગવાન વિષ્ણુનું પ્રતિનિધિત્વ કરે છે. તેઓ બ્રહ્માંડના પાલનહાર તરીકે માનવામાં આવે છે.
+પ્રતિમામાં ભગવાન વિષ્ણુને મુગટ, આભૂષણો અને સુંદર વસ્ત્રો સાથે દર્શાવવામાં આવ્યા છે.
+</p>
+
+<h3>વિષ્ણુના મુખ્ય પ્રતીકો</h3>
+
+<ul>
+<li><b>ચક્ર (સુદર્શન ચક્ર)</b> – ધર્મ અને રક્ષણનું પ્રતીક.</li>
+<li><b>શંખ</b> – સૃષ્ટિ અને પવિત્ર “ૐ” નાદનું પ્રતીક.</li>
+</ul>
+
+<h3>ઐતિહાસિક મહત્વ</h3>
+
+<p>
+આ પ્રતિમા સોલંકી યુગની ધાર્મિક અને કલાત્મક પરંપરાનો મહત્વપૂર્ણ પુરાવો છે. આવી પ્રતિમાઓ મંદિરોમાં સ્થાપિત કરવામાં આવતી હતી અને વૈષ્ણવ પરંપરાની લોકપ્રિયતા દર્શાવે છે.
+</p>
+
+<h3>મહત્વ</h3>
+
+<ul>
+<li>બ્રહ્માંડનું પાલન</li>
+<li>ધર્મનું રક્ષણ</li>
+<li>કરુણા અને દૈવી માર્ગદર્શન</li>
+</ul>
+
+</div>
+
+<!-- Hindi -->
+<div id="hi" class="lang">
+
+<h2>भगवान विष्णु की प्रतिमा</h2>
+
+<div class="info-box">
+<b>स्थान:</b> श्रीस्थल संग्रहालय (बिंदु सरोवर संग्रहालय), सिद्धपुर, गुजरात<br>
+<b>काल:</b> मध्यकालीन काल (लगभग 10वीं–13वीं शताब्दी)<br>
+<b>सामग्री:</b> पत्थर
+</div>
+
+<h3>विवरण</h3>
+
+<p>
+यह प्रतिमा भगवान विष्णु को दर्शाती है, जो हिन्दू धर्म के प्रमुख देवताओं में से एक हैं तथा ब्रह्मांड के पालनकर्ता माने जाते हैं।
+प्रतिमा में उन्हें मुकुट, आभूषण और सुंदर वस्त्रों के साथ दर्शाया गया है।
+</p>
+
+<h3>मुख्य प्रतीक</h3>
+
+<ul>
+<li><b>चक्र (सुदर्शन चक्र)</b> – धर्म और सुरक्षा का प्रतीक।</li>
+<li><b>शंख</b> – सृष्टि और पवित्र “ॐ” ध्वनि का प्रतीक।</li>
+</ul>
+
+<h3>ऐतिहासिक महत्व</h3>
+
+<p>
+यह प्रतिमा गुजरात के सोलंकी काल की धार्मिक और कलात्मक परंपराओं को दर्शाती है।
+</p>
+
+<h3>महत्व</h3>
+
+<ul>
+<li>ब्रह्मांड का संरक्षण</li>
+<li>धर्म की रक्षा</li>
+<li>करुणा और दिव्य मार्गदर्शन</li>
+</ul>
+
+</div>
+
+<div class="audio-section">
+<h3>🔊 Audio Guide</h3>
+<audio controls>
+<source src="audio-guide.mp3" type="audio/mpeg">
+Your browser does not support audio.
+</audio>
+</div>
+
+</div>
 </div>
 
 <footer>
-    © Shristhal Sangrahalay (Bindu Sarovar Museum), Siddhpur
+© Shristhal Sangrahalay | Bindu Sarovar Museum | Siddhpur
 </footer>
+
+<script>
+function changeLanguage(){
+let lang=document.getElementById("language").value;
+
+document.querySelectorAll(".lang").forEach(function(item){
+item.classList.remove("active");
+});
+
+document.getElementById(lang).classList.add("active");
+}
+</script>
 
 </body>
 </html>
